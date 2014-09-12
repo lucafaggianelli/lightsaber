@@ -150,7 +150,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 
             if (scanning && 
             		(System.currentTimeMillis()-startSwing) > SWING_DUR &&
-            		(values[0] + values[1] + values[2]) > 1.5) {
+            		(Math.abs(values[0]) + Math.abs(values[1]) + Math.abs(values[2])) > 1.5) {
             	stop(SWING);
                 play(SWING, 0);
                 startSwing = System.currentTimeMillis();
